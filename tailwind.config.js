@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        secondary: "#FBD784",
+      },
       fontFamily: {
         primary: ['"Lato"'],
         secondary: ['"Cormorant Garamond"'],
