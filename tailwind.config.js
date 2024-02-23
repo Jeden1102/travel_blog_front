@@ -11,11 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: "#0B1D26",
         secondary: "#FBD784",
       },
       fontFamily: {
         primary: ['"Lato"'],
         secondary: ['"Cormorant Garamond"'],
+        numbers: ['"Anta"'],
       },
     },
   },
