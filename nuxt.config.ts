@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxt/image",
     "nuxt-aos",
+    "@nuxtjs/strapi",
   ],
   postcss: {
     plugins: {

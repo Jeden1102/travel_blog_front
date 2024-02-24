@@ -14,7 +14,4 @@
 
 <script setup lang="ts">
 const categories = ['My Tips', 'Daily', 'Others', 'Travel Guide', 'Inspiring Travel Stories', 'Culinary Discoveries', 'Adventures on the Trail', 'Luxury Travel', 'Budget Traveling', 'City Exploration', 'Encounters with Local Culture', 'Nature and Ecotourism', 'Active Leisure', 'Packing Tips', 'Photography Guides', 'Road Trips', 'Exotic Island Hopping', 'Traveling with Kids'];
-
 </script>
-
-<style scoped></style>
