@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-primary">
+  <div class="min-h-screen bg-primary overflow-x-hidden">
     <AppHeader />
     <NuxtPage />
     <AppFooter />
