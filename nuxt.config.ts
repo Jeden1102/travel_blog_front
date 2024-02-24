@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   image: {
     dir: "assets/images",
+    strapi: {
+      baseURL: "http://localhost:1337/uploads/",
+    },
   },
   modules: [
     [
