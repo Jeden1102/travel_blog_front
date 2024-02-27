@@ -1,5 +1,6 @@
 interface BlogCategory {
   data: {
+    id: string;
     attributes: {
       name: string;
     };
@@ -24,8 +25,23 @@ export interface Blog {
 
 export interface BlogData {
   data: {
-    blogs: {
+    blogs?: {
       data: Blog[];
+    };
+  };
+}
+
+interface BlogCategoryData {
+  id: string;
+  attributes: {
+    name: string;
+  };
+}
+
+export interface BlogCategoriesData {
+  data: {
+    blogCategories?: {
+      data: BlogCategoryData[];
     };
   };
 }
