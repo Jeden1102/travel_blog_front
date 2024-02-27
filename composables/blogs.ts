@@ -20,6 +20,7 @@ export const getPromotedBlogs = async () => {
                 }
               }
               content
+              short_content
               blog_category {
                 data {
                   attributes {
@@ -81,6 +82,7 @@ export const getBlogsByCategory = async (categoryID?: string) => {
               }
             }
             content
+            short_content
             blog_category {
               data {
                 attributes {
@@ -115,6 +117,13 @@ export const getBlogPost = async (blogID?: string) => {
             title
             promoted
             image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            landscape_image {
               data {
                 attributes {
                   url

@@ -9,9 +9,6 @@
                 Blog
             </NuxtLink>
             <NuxtLink class="menu-link" to="/">
-                About me
-            </NuxtLink>
-            <NuxtLink class="menu-link" to="/">
                 Travel map
             </NuxtLink>
         </div>

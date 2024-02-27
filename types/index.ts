@@ -12,8 +12,16 @@ export interface Blog {
     title: string;
     promoted: boolean;
     content: string;
+    short_content: string;
     blog_category: BlogCategory;
     image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    landscape_image: {
       data: {
         attributes: {
           url: string;

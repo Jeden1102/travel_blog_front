@@ -9,7 +9,7 @@
             <AtomsHeading data-aos="fade-down" data-aos-delay="200" custom-class="md:text-xl">{{ blog.attributes.title }}
             </AtomsHeading>
             <p data-aos="fade-up" data-aos-delay="300" class="text-white font-semibold mt-2">
-                {{ blog.attributes.content }}
+                {{ blog.attributes.short_content }}
             </p>
             <div data-aos="fade-up" data-aos-delay="500">
                 <AtomsButton custom-class="mt-4" type="link" :uri="blogURI">read more
