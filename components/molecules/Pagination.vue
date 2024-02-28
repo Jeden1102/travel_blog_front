@@ -1,33 +1,26 @@
 <template>
-    <nav aria-label="Page navigation example" class="flex justify-center">
+    <nav aria-label="Page navigation example" class="flex justify-center" v-if="pagination.total > 0">
         <ul class="flex gap-4">
-            <li>
-                <button class="text-secondary">Previous</button>
+            <li v-if="pagination?.page > 1">
+                <button class="text-secondary" @click="emits('page-change', 'prev')">Previous</button>
             </li>
             <li>
-                <button class="text-secondary">1</button>
+                <button class="text-secondary underline">{{ pagination.page }}</button>
             </li>
-            <li>
-                <button class="text-secondary">2</button>
-            </li>
-            <li>
-                <button class="text-secondary underline-offset-2">3</button>
-            </li>
-            <li>
-                <button class="text-secondary">4</button>
-            </li>
-            <li>
-                <button class="text-secondary">5</button>
-            </li>
-            <li>
-                <button class="text-secondary">Next</button>
+            <li v-if="pagination.pageCount > pagination.page">
+                <button class="text-secondary" @click="emits('page-change', 'next')">Next</button>
             </li>
         </ul>
     </nav>
 </template>
 
 <script setup lang="ts">
+import { defineProps, defineEmits, ref } from 'vue';
+import type { Pagination } from '~/types';
 
+const props = defineProps<{
+    pagination: Pagination;
+}>()
+
+const emits = defineEmits(['page-change']);
 </script>
-
-<style scoped></style>

@@ -61,14 +61,16 @@ export const getBlogCategories = async () => {
   return categories;
 };
 
-export const getBlogsByCategory = async (categoryID?: string) => {
+export const getBlogsByCategory = async (
+  categoryID?: string,
+  page: number = 0,
+) => {
   const graphql = useStrapiGraphQL();
 
   let blogs: BlogData = { data: {} };
   try {
-    const query = `
-    query {
-      blogs${categoryID ? `(filters: { blog_category: { id: { eq: ${categoryID} } } })` : ""} {
+    blogs = await graphql(`query {
+      blogs(pagination: { page: ${page}, pageSize: 9 } ${categoryID ? `, filters:{blog_category:{id :{eq : ${categoryID}} }}` : ""}) {
         data {
           id
           attributes {
@@ -92,11 +94,16 @@ export const getBlogsByCategory = async (categoryID?: string) => {
             }
           }
         }
+        meta {
+          pagination {
+            page
+            pageSize
+            total
+            pageCount
+          }
+        }
       }
-    }
-  `;
-
-    blogs = await graphql(query);
+    }`);
   } catch (err) {
     console.log(err);
   }
@@ -114,6 +121,7 @@ export const getBlogPost = async (blogID?: string) => {
         data {
           id
           attributes {
+            publishedAt
             title
             promoted
             image {
@@ -148,6 +156,5 @@ export const getBlogPost = async (blogID?: string) => {
   } catch (err) {
     console.log(err);
   }
-  console.log(blogs);
   return blogs;
 };

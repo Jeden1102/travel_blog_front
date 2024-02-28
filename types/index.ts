@@ -14,6 +14,7 @@ export interface Blog {
     content: string;
     short_content: string;
     blog_category: BlogCategory;
+    publishedAt: string;
     image: {
       data: {
         attributes: {
@@ -31,10 +32,20 @@ export interface Blog {
   };
 }
 
+export interface Pagination {
+  page: number;
+  pageCount: number;
+  pageSize: number;
+  total: number;
+}
+
 export interface BlogData {
   data: {
     blogs?: {
       data: Blog[];
+      meta: {
+        pagination: Pagination;
+      };
     };
   };
 }
