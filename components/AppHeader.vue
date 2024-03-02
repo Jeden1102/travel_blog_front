@@ -8,7 +8,7 @@
             <NuxtLink class="menu-link" to="/blogs">
                 Blog
             </NuxtLink>
-            <NuxtLink class="menu-link" to="/">
+            <NuxtLink class="menu-link" to="/travel-map">
                 Travel map
             </NuxtLink>
         </div>
