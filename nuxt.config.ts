@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
+  runtimeConfig: {
+    public: {
+      googleApiKey: "",
+    },
+  },
   image: {
     dir: "assets/images",
     strapi: {
