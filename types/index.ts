@@ -64,3 +64,29 @@ export interface BlogCategoriesData {
     };
   };
 }
+
+export interface Journey {
+  data: {
+    id: string;
+    attributes: {
+      date: string;
+      title: string;
+      location: {
+        lat: number;
+        lon: number;
+        display_name: string;
+      };
+    };
+    blog: {
+      data: Blog;
+    };
+  };
+}
+
+export interface JourneyData {
+  data?: {
+    journeys: {
+      data: Journey;
+    };
+  };
+}

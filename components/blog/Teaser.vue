@@ -6,7 +6,8 @@
                 <AtomsSubheading custom-class="w-fit text-sm">{{ blog.attributes.blog_category.data.attributes.name }}
                 </AtomsSubheading>
             </div>
-            <AtomsHeading data-aos="fade-down" data-aos-delay="200" custom-class="md:text-xl">{{ blog.attributes.title }}
+            <AtomsHeading data-aos="fade-down" data-aos-delay="200" custom-class="md:text-xl">{{ blog.attributes.title
+                }}
             </AtomsHeading>
             <p data-aos="fade-up" data-aos-delay="300" class="text-white font-semibold mt-2">
                 {{ blog.attributes.short_content }}
@@ -17,15 +18,17 @@
                 </AtomsButton>
             </div>
         </div>
-        <NuxtImg data-aos="fade-left" data-aos-delay="300" class="w-full h-52  object-cover max-w-[350px]" loading="lazy"
-            width="250" height="360" format="webp"
-            :src="`http://localhost:1337${blog.attributes.image.data.attributes.url}`" alt="" />
+        <NuxtImg data-aos="fade-left" data-aos-delay="300" class="w-full h-52  object-cover max-w-[350px]"
+            loading="lazy" width="250" height="360" format="webp"
+            :src="`${config.public.apiUrl}${blog.attributes.image.data.attributes.url}`" alt="" />
     </div>
 </template>
 
 <script lang="ts" setup>
 import type { Blog } from '~/types';
 import { defineProps } from 'vue';
+
+const config = useRuntimeConfig()
 
 const props = defineProps<{
     customClass?: string;

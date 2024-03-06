@@ -5,13 +5,14 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleApiKey: "",
+      apiUrl: "",
     },
   },
   image: {
     dir: "assets/images",
-    strapi: {
-      baseURL: "http://localhost:1337/uploads/",
-    },
+  },
+  strapi: {
+    url: process.env.NUXT_PUBLIC_API_URL || "http://localhost:1337",
   },
   modules: [
     [

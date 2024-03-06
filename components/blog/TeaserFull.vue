@@ -21,13 +21,15 @@
         </div>
         <NuxtImg data-aos="fade-left" data-aos-delay="300"
             class="w-full h-52 sm:h-full sm:flex-1 object-cover max-w-[560px]" loading="lazy" width="566" height="720"
-            format="webp" :src="`http://localhost:1337${blog.attributes.image.data.attributes.url}`" alt="" />
+            format="webp" :src="`${config.public.apiUrl}${blog.attributes.image.data.attributes.url}`" alt="" />
     </div>
 </template>
 
 <script lang="ts" setup>
 import { defineProps } from 'vue';
 import type { Blog } from "../../types";
+
+const config = useRuntimeConfig()
 
 const props = defineProps<{
     customClass?: string;
