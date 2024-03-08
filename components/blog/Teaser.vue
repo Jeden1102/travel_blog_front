@@ -6,7 +6,7 @@
                 <AtomsSubheading custom-class="w-fit text-sm">{{ blog.attributes.blog_category.data.attributes.name }}
                 </AtomsSubheading>
             </div>
-            <AtomsHeading data-aos="fade-down" data-aos-delay="200" custom-class="md:text-xl">{{ blog.attributes.title
+            <AtomsHeading data-aos="fade-down" data-aos-delay="200" custom-class="md:text-xl line-clamp-2">{{ blog.attributes.title
                 }}
             </AtomsHeading>
             <p data-aos="fade-up" data-aos-delay="300" class="text-white font-semibold mt-2">

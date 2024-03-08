@@ -8,7 +8,7 @@
         </div>
         <NuxtImg data-aos="fade-left" data-aos-delay="300" class="w-full h-72 object-cover my-6" loading="lazy"
             width="960" height="360" format="webp"
-            :src="`${config.public.apiUrl}{blog.data?.blog.data.attributes.landscape_image.data.attributes.url}`"
+            :src="`${config.public.apiUrl}${blog.data?.blog.data.attributes.landscape_image.data.attributes.url}`"
             alt="" />
         <div class="blog-full__content" v-html="blog.data?.blog.data.attributes.content">
         </div>

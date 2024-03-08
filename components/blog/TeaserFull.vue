@@ -14,7 +14,7 @@
                 {{ blog.attributes.short_content }}
             </p>
             <div data-aos="fade-up" data-aos-delay="500">
-                <AtomsButton custom-class="mt-4" type="link" uri="#test">read more
+                <AtomsButton custom-class="mt-4" type="link" :uri="blogURI">read more
                     <Icon class="text-2xl" name="material-symbols-light:arrow-right-alt-rounded" />
                 </AtomsButton>
             </div>
@@ -36,4 +36,6 @@ const props = defineProps<{
     blog: Blog;
     index: number;
 }>()
+
+const blogURI = `/blog/${convertToSlug(props.blog.attributes.title)}?id=${props.blog.id}`;
 </script>

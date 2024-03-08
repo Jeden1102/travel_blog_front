@@ -4,7 +4,7 @@
         <div class="container-slim z-10" data-aos="fade-down" data-aos-delay="100">
             <AtomsSubheading>A hiking guide</AtomsSubheading>
             <AtomsHeading>Be prepared for the Mountains and beyond!</AtomsHeading>
-            <AtomsButton custom-class="mt-4" type="link" uri="#test">explore more
+            <AtomsButton custom-class="mt-4" type="link" uri="#explore-more">explore more
                 <Icon class="text-2xl" name="material-symbols-light:arrow-downward-alt-rounded" />
             </AtomsButton>
         </div>
