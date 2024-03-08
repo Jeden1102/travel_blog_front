@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: Lato;
+    scroll-behavior: smooth;
   }
   .menu-link {
     @apply uppercase text-gray-700 md:text-lg   md:capitalize md:text-white;
