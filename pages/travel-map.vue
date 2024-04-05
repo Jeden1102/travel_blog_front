@@ -4,7 +4,7 @@
         <AtomsHeading>Travel map</AtomsHeading>
         <template v-if="journeys">
             <GoogleMap :disable-default-ui="true" :styles="custom" class="mt-8" :api-key="config.public.googleApiKey"
-                style="width: 100%; height: 500px" :center="journeys.center" :zoom="6">
+                style="width: 100%; height: 500px" :center="journeys.center" :zoom="3">
                 <MarkerCluster>
                     <Marker v-for="(location, i) in journeys.locations" :options="{ position: location }" :key="i">
                         <InfoWindow class="bg-gray-600 p-4">
