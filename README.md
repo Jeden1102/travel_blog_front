@@ -1,75 +1,35 @@
-# Nuxt 3 Minimal Starter
+# Travel Blog front
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Simple travel blog with Strapi DB as a headless CMS.
 
-## Setup
+# Technologies used
 
-Make sure to install the dependencies:
+- Nuxt3
+- Taiwlind
+- Typescript
+- Google maps API
+- AOS
 
-```bash
-# npm
-npm install
+## Installation
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+1. Build and run dev.
 
 ```bash
-# npm
+npm run install
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
+2. Copy env.example to .env and insert keys.
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+cp .env.example .env
 ```
 
-Locally preview production build:
+## Live version
 
-```bash
-# npm
-npm run preview
+See me live !
+https://travel-blog-front-ashen.vercel.app/
 
-# pnpm
-pnpm run preview
 
-# yarn
-yarn preview
 
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
